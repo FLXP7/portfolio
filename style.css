@@ -1,0 +1,195 @@
+/* Importando uma fonte para o projeto */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+
+/* CSS para o portfólio */
+/* Variáveis de cor e estilos globais */
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Cor vermelha mais clara para textos */
+.text-danger-light {
+    color: #ff6b6b;
+}
+
+/* Header transparente que fica sólido ao rolar */
+.bg-dark-transparent {
+    background-color: rgba(33, 37, 41, 0.9);
+    backdrop-filter: blur(5px);
+    transition: background-color 0.3s ease;
+}
+
+#main-header.scrolled {
+    background-color: #212529; /* Cor de fundo do tema escuro do Bootstrap */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-dark .nav-link {
+    transition: color 0.3s ease;
+}
+
+.navbar-dark .nav-link:hover, .navbar-dark .nav-link.active {
+    color: #dc3545; /* Cor danger do Bootstrap */
+}
+
+/* Estilo da imagem de perfil */
+.profile-image-wrapper {
+    width: 250px;
+    height: 250px;
+}
+
+/* Animação da seta para rolar para baixo */
+.scroll-down-arrow {
+    animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-20px);
+    }
+    60% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Título das seções com linha inferior */
+.section-title {
+    display: inline-block;
+    position: relative;
+    padding-bottom: 10px;
+}
+.section-title span {
+    position: relative;
+    z-index: 1;
+}
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background-color: #dc3545;
+}
+
+/* Efeito de sobreposição nos projetos */
+.project-item .project-overlay {
+    background-color: rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    transform: scale(0.9);
+    transition: all 0.3s ease;
+}
+
+.project-item:hover .project-overlay {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Ícones de redes sociais */
+.social-icons .social-icon {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #343a40; /* bg-dark do bootstrap */
+    color: #f8f9fa; /* text-light do bootstrap */
+    margin-right: 10px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.social-icons .social-icon:hover {
+    background-color: #dc3545; /* Cor danger do Bootstrap */
+    transform: translateY(-3px);
+}
+
+/* Ícones de contato */
+.contact-icon-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px;
+    height: 45px;
+    background-color: rgba(220, 53, 69, 0.1); /* Cor de perigo com opacidade */
+    border-radius: 50%;
+    font-size: 1.2rem;
+    color: #dc3545;
+}
+
+/* CSS para o jogo da memória */
+
+.header-2 {
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem 2rem;
+}
+.header-2 h1 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+}
+.header-2 h2 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color: red
+}
+
+.btn-back {
+    background-color: red;
+    border: none;
+    color: var(--cor-texto-principal);
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+    display: flex;
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+}
+
+.btn-back:hover {
+    color: #f6121d;
+}
+
+
+
+/* Painel de Pontuação */
+.painel-pontuacao {
+    background-color: var(--cor-painel);
+    border-radius: var(--raio-borda);
+    padding: 1.5rem 2rem;
+    width: 100%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.footer-2 {
+    background-color: var(--cor-painel);
+    color: var(--cor-texto-principal);
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 100px;
+    left: 0;
+    width: 100%;
+}
